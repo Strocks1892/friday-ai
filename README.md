@@ -1,9 +1,8 @@
-# Main-Project
 # 🤖 F.R.I.D.A.Y. AI Assistant
 
 > **F.R.I.D.A.Y. (Female Replacement Intelligent Digital Assistant Youth)** is a personal AI assistant inspired by Marvel's *F.R.I.D.A.Y.*, designed to evolve into a modular AI operating system capable of understanding, remembering, and assisting users with everyday digital tasks.
 
-> **Current Version:** `v0.1 - AI Chat Core`
+> **Current Version:** `v0.1.0 - AI Chat Core`
 
 ---
 
@@ -19,11 +18,11 @@ F.R.I.D.A.Y. aims to become a fully featured AI assistant with capabilities such
 * 👁️ Vision capabilities
 * 🤖 Multi-agent architecture
 
-Version **0.1** focuses on building the core conversational AI system.
+Version **0.1.0** focuses on building the core conversational AI system.
 
 ---
 
-# ✨ Features (v0.1)
+# ✨ Features (v0.1.0)
 
 * AI-powered chat interface
 * Natural language conversation
@@ -130,7 +129,7 @@ uvicorn app.main:app --reload
 
 # 📌 Roadmap
 
-## ✅ v0.1
+## ✅ v0.1.0
 
 * Chat system
 * API integration
@@ -139,7 +138,7 @@ uvicorn app.main:app --reload
 
 ---
 
-## 🔜 v0.2
+## 🔜 v0.2.0
 
 * Long-term memory
 * User preferences
@@ -148,7 +147,7 @@ uvicorn app.main:app --reload
 
 ---
 
-## 🔜 v0.3
+## 🔜 v0.3.0
 
 * Retrieval-Augmented Generation (RAG)
 * PDF chat
@@ -157,7 +156,7 @@ uvicorn app.main:app --reload
 
 ---
 
-## 🔜 v0.4
+## 🔜 v0.4.0
 
 * Voice assistant
 * Speech-to-text
@@ -166,7 +165,7 @@ uvicorn app.main:app --reload
 
 ---
 
-## 🔜 v0.5
+## 🔜 v0.5.0
 
 * Computer control
 * Browser automation
@@ -175,7 +174,7 @@ uvicorn app.main:app --reload
 
 ---
 
-## 🔜 v0.6
+## 🔜 v0.6.0
 
 * Screen understanding
 * OCR
@@ -184,7 +183,7 @@ uvicorn app.main:app --reload
 
 ---
 
-## 🔜 v1.0
+## 🔜 v1.0.0
 
 * Complete modular AI assistant
 * Multi-agent architecture
