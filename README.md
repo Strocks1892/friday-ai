@@ -1,8 +1,14 @@
 # 🤖 F.R.I.D.A.Y. AI Assistant
 
 > **F.R.I.D.A.Y. (Female Replacement Intelligent Digital Assistant Youth)** is a personal AI assistant inspired by Marvel's *F.R.I.D.A.Y.*, designed to evolve into a modular AI operating system capable of understanding, remembering, and assisting users with everyday digital tasks.
+> 🚧 **Status:** Actively under development. New features are being added milestone by milestone following semantic versioning.
 
-> **Current Version:** `v0.1.0 - AI Chat Core`
+> **Current Version:** `v0.1.0 - Core AI Assistant`
+
+![Python](https://img.shields.io/badge/Python-3.14-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Latest-green)
+![Gemini](https://img.shields.io/badge/Google-Gemini-orange)
+![License](https://img.shields.io/badge/License-MIT-red)
 
 ---
 
@@ -24,13 +30,37 @@ Version **0.1.0** focuses on building the core conversational AI system.
 
 # ✨ Features (v0.1.0)
 
-* AI-powered chat interface
-* Natural language conversation
-* Conversation history
-* Markdown-formatted responses
-* Clean project structure
-* FastAPI backend
-* Easy configuration using environment variables
+- 🤖 AI-powered conversational assistant using Google Gemini
+- 🧠 Short-term conversation memory
+- 🎭 Custom F.R.I.D.A.Y. personality
+- ⚡ FastAPI REST API backend
+- 📝 Request and response logging
+- 🛡 Professional error handling
+- 🔐 Secure API key management using `.env`
+- 📦 Modular project architecture
+- 💬 Context-aware conversations within the current session
+
+# ✅ Current Capabilities
+
+- Remembers conversations during the current session
+- Maintains a consistent F.R.I.D.A.Y. personality
+- Generates responses using Google Gemini
+- Logs every AI request and response
+- Handles AI service failures gracefully
+
+# 🎯 Example Conversation
+
+User:
+> My name is Stavan.
+
+F.R.I.D.A.Y.:
+> Nice to meet you, Stavan.
+
+User:
+> What is my name?
+
+F.R.I.D.A.Y.:
+> Your name is Stavan.
 
 ---
 
@@ -40,7 +70,10 @@ Version **0.1.0** focuses on building the core conversational AI system.
 | ------------------- | ------------------------- |
 | Python              | Core programming language |
 | FastAPI             | Backend API               |
-| OpenAI / Gemini API | Large Language Model      |
+| Google Gemini API   | AI Model & Inference      |
+| Pydantic            | Data Validation           |
+| python-dotenv       | Environment Variables     |
+| Logging             | Monitoring & Debugging    |
 | Uvicorn             | ASGI server               |
 | Git & GitHub        | Version control           |
 
@@ -48,13 +81,24 @@ Version **0.1.0** focuses on building the core conversational AI system.
 
 # 📁 Project Structure
 
-```text
 friday-ai/
 │
 ├── app/
-│   ├── api/
-│   ├── services/
+│   ├── core/
+│   │   ├── config.py
+│   │   └── memory.py
+│   │
 │   ├── models/
+│   │
+│   ├── prompts/
+│   │   └── system_prompt.py
+│   │
+│   ├── services/
+│   │   └── chat_service.py
+│   │
+│   ├── utils/
+│   │   └── logger.py
+│   │
 │   └── main.py
 │
 ├── requirements.txt
@@ -62,8 +106,26 @@ friday-ai/
 ├── .gitignore
 ├── README.md
 └── LICENSE
-```
 
+---
+
+# 🏗️ Architecture
+
+```text
+User
+   │
+   ▼
+FastAPI
+   │
+   ▼
+Chat Service
+   │
+   ├── System Prompt
+   ├── Memory
+   ├── Logger
+   ▼
+Google Gemini API
+```
 ---
 
 # 🚀 Getting Started
@@ -71,7 +133,7 @@ friday-ai/
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/friday-ai.git
+git clone https://github.com/Strocks1892/friday-ai.git
 cd friday-ai
 ```
 
@@ -114,7 +176,7 @@ Create a `.env` file based on `.env.example`.
 Example:
 
 ```env
-OPENAI_API_KEY=your_api_key_here
+GEMINI_API_KEY=your_api_key_here
 ```
 
 ---
@@ -123,73 +185,119 @@ OPENAI_API_KEY=your_api_key_here
 
 ```bash
 uvicorn app.main:app --reload
+## 📖 API Documentation
+
+Once the server is running:
+
+Swagger UI
+
+http://127.0.0.1:8000/docs
+
+ReDoc
+
+http://127.0.0.1:8000/redoc
 ```
 
 ---
 
 # 📌 Roadmap
 
-## ✅ v0.1.0
+## ✅ v0.1.0 - Core AI Assistant
 
-* Chat system
-* API integration
-* Conversation history
-* Project structure
-
----
-
-## 🔜 v0.2.0
-
-* Long-term memory
-* User preferences
-* Semantic search
-* Memory retrieval
+- [x] FastAPI Backend
+- [x] Google Gemini Integration
+- [x] Custom F.R.I.D.A.Y. Personality
+- [x] Short-Term Memory
+- [x] Logging
+- [x] Error Handling
+- [x] Modular Project Structure
 
 ---
 
-## 🔜 v0.3.0
+## 🚧 v0.2.0 - AI Tools
 
-* Retrieval-Augmented Generation (RAG)
-* PDF chat
-* Document search
-* Knowledge base
-
----
-
-## 🔜 v0.4.0
-
-* Voice assistant
-* Speech-to-text
-* Text-to-speech
-* Wake word detection
+- [ ] Tool Calling
+- [ ] Calculator
+- [ ] Date & Time
+- [ ] Weather
+- [ ] Browser Search
+- [ ] File Search
+- [ ] Application Launcher
 
 ---
 
-## 🔜 v0.5.0
+## 🔜 v0.3.0 - Voice Assistant
 
-* Computer control
-* Browser automation
-* File management
-* Terminal automation
-
----
-
-## 🔜 v0.6.0
-
-* Screen understanding
-* OCR
-* Vision module
-* Image analysis
+- [ ] Speech-to-Text
+- [ ] Text-to-Speech
+- [ ] Wake Word
 
 ---
 
-## 🔜 v1.0.0
+## 🔜 v0.4.0 - Vision
 
-* Complete modular AI assistant
-* Multi-agent architecture
-* Persistent memory
-* Voice + Vision + Automation
-* Production-ready deployment
+- [ ] OCR
+- [ ] Image Understanding
+- [ ] Screenshot Analysis
+
+---
+
+## 🔜 v0.5.0 - Long-Term Memory
+
+- [ ] User Preferences
+- [ ] Database
+- [ ] Vector Memory
+- [ ] Retrieval-Augmented Generation (RAG)
+
+---
+
+## 🔜 v0.6.0 - Computer Automation
+
+- [ ] Browser Automation
+- [ ] File Management
+- [ ] Computer Control
+- [ ] Terminal Automation
+
+---
+
+## 🎯 v1.0.0
+
+- [ ] Fully Modular AI Assistant
+- [ ] Persistent Memory
+- [ ] Voice + Vision + Automation
+- [ ] Production Ready
+
+---
+
+# 📦 Version History
+
+## v0.1.0 - Core AI Assistant
+
+**Release Date:** July 2026
+
+### ✨ Added
+
+- FastAPI backend
+- Google Gemini integration
+- Custom F.R.I.D.A.Y. personality
+- Short-term conversation memory
+- Professional logging
+- Error handling
+- Modular project architecture
+- Environment-based configuration
+
+### 🛠 Improved
+
+- Cleaner project structure
+- Better prompt engineering
+- More consistent AI responses
+
+### 🐞 Fixed
+
+- Gemini model compatibility issues
+- Chat service initialization
+- Conversation memory handling
+- Logging improvements
 
 ---
 
@@ -225,7 +333,7 @@ This project is licensed under the MIT License.
 
 # ⭐ Future Vision
 
-The long-term goal is to develop F.R.I.D.A.Y. into a modular AI operating system capable of assisting with research, coding, productivity, automation, and intelligent decision support while maintaining a clean, extensible architecture.
+The long-term goal is to transform F.R.I.D.A.Y. into a modular AI operating system capable of understanding context, remembering users, controlling local applications, interacting with the web, analyzing documents, processing voice and images, and assisting with coding, research, productivity, and everyday digital workflows while maintaining a scalable and production-ready architecture.
 
 ---
 
