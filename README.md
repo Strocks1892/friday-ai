@@ -81,6 +81,7 @@ F.R.I.D.A.Y.:
 
 # 📁 Project Structure
 
+```text
 friday-ai/
 │
 ├── app/
@@ -106,6 +107,7 @@ friday-ai/
 ├── .gitignore
 ├── README.md
 └── LICENSE
+```
 
 ---
 
