@@ -86,28 +86,32 @@ Thursday:
 thursday-ai/
 │
 ├── app/
+│   ├── ai/
+│   │   └── engine.py
+│   │
 │   ├── core/
-│   │   ├── config.py
-│   │   └── memory.py
 │   │
 │   ├── models/
 │   │
 │   ├── prompts/
-│   │   └── system_prompt.py
 │   │
 │   ├── services/
 │   │   └── chat_service.py
 │   │
-│   ├── utils/
-│   │   └── logger.py
+│   ├── tools/
+│   │   ├── base_tool.py
+│   │   ├── calculator.py
+│   │   ├── date_time_tool.py
+│   │   ├── app_launcher.py
+│   │   ├── functions.py
+│   │   └── tool_manager.py
 │   │
-│   └── main.py
+│   └── utils/
 │
-├── requirements.txt
-├── .env.example
-├── .gitignore
 ├── README.md
-└── LICENSE
+├── CHANGELOG.md
+├── TODO.md
+└── requirements.txt
 ```
 
 ---

@@ -11,6 +11,10 @@ from app.utils.logger import logger
 
 from app.core.memory import conversation_history
 
+from app.ai.engine import AIEngine
+
+from app.tools.tool_manager import ToolManager
+
 from app.tools.function import (
     calculate,
     get_datetime,
@@ -21,9 +25,7 @@ load_dotenv()
 
 class ChatService:
     def __init__(self):
-        self.client = genai.Client(
-            api_key=os.getenv("GEMINI_API_KEY")
-        )
+        self.ai = AIEngine()
 
         self.tool_manager = ToolManager()
         
@@ -61,15 +63,7 @@ class ChatService:
             # -------------------------------
             # Ask Gemini
             # -------------------------------
-            response = self.client.models.generate_content(
-                model="gemini-flash-lite-latest",
-                contents=f"""
-                {SYSTEM_PROMPT}
-
-                Conversation history:
-                {history}
-                """,
-            )
+            response = self.ai.generate(history)
 
             # -------------------------------
             # Save AI response
@@ -77,13 +71,13 @@ class ChatService:
             
             conversation_history.append({
                 "role": "assistant",
-                "text": response.text
+                "text": response
             })
 
             logger.info("Response generated successfully.")
 
             return ChatResponse(
-                response=response.text
+                response=response
             )
 
         except Exception as e:
