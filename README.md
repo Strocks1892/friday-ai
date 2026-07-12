@@ -1,9 +1,10 @@
-# 🤖 F.R.I.D.A.Y. AI Assistant
+# 🤖 Thursday AI Assistant
 
-> **F.R.I.D.A.Y. (Female Replacement Intelligent Digital Assistant Youth)** is a personal AI assistant inspired by Marvel's *F.R.I.D.A.Y.*, designed to evolve into a modular AI operating system capable of understanding, remembering, and assisting users with everyday digital tasks.
+> **Thursday AI** is a personal AI assistant designed to evolve into a modular AI operating system capable of understanding, remembering, and assisting users with everyday digital tasks.
+
 > 🚧 **Status:** Actively under development. New features are being added milestone by milestone following semantic versioning.
 
-> **Current Version:** `v0.1.0 - Core AI Assistant`
+> **Current Version:** v0.1.0 – Core Thursday AI
 
 ![Python](https://img.shields.io/badge/Python-3.14-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Latest-green)
@@ -14,7 +15,7 @@
 
 ## 📌 Overview
 
-F.R.I.D.A.Y. aims to become a fully featured AI assistant with capabilities such as:
+Thursday aims to become a fully featured AI assistant with capabilities such as:
 
 * 🧠 Long-term memory
 * 📄 Document understanding (RAG)
@@ -32,7 +33,7 @@ Version **0.1.0** focuses on building the core conversational AI system.
 
 - 🤖 AI-powered conversational assistant using Google Gemini
 - 🧠 Short-term conversation memory
-- 🎭 Custom F.R.I.D.A.Y. personality
+- 🎭 Custom Thursday-AI personality
 - ⚡ FastAPI REST API backend
 - 📝 Request and response logging
 - 🛡 Professional error handling
@@ -43,7 +44,7 @@ Version **0.1.0** focuses on building the core conversational AI system.
 # ✅ Current Capabilities
 
 - Remembers conversations during the current session
-- Maintains a consistent F.R.I.D.A.Y. personality
+- Maintains a consistent Thursday-AI personality
 - Generates responses using Google Gemini
 - Logs every AI request and response
 - Handles AI service failures gracefully
@@ -53,13 +54,13 @@ Version **0.1.0** focuses on building the core conversational AI system.
 User:
 > My name is Stavan.
 
-F.R.I.D.A.Y.:
+Thursday:
 > Nice to meet you, Stavan.
 
 User:
 > What is my name?
 
-F.R.I.D.A.Y.:
+Thursday:
 > Your name is Stavan.
 
 ---
@@ -82,7 +83,7 @@ F.R.I.D.A.Y.:
 # 📁 Project Structure
 
 ```text
-friday-ai/
+thursday-ai/
 │
 ├── app/
 │   ├── core/
@@ -135,8 +136,8 @@ Google Gemini API
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Strocks1892/friday-ai.git
-cd friday-ai
+git clone https://github.com/Strocks1892/thursday-ai.git
+cd thursday-ai
 ```
 
 ---
@@ -187,18 +188,19 @@ GEMINI_API_KEY=your_api_key_here
 
 ```bash
 uvicorn app.main:app --reload
+```
+
 ## 📖 API Documentation
 
 Once the server is running:
 
-Swagger UI
+### Swagger UI
 
 http://127.0.0.1:8000/docs
 
-ReDoc
+### ReDoc
 
 http://127.0.0.1:8000/redoc
-```
 
 ---
 
@@ -208,7 +210,7 @@ http://127.0.0.1:8000/redoc
 
 - [x] FastAPI Backend
 - [x] Google Gemini Integration
-- [x] Custom F.R.I.D.A.Y. Personality
+- [x] Custom Thursday-AI Personality
 - [x] Short-Term Memory
 - [x] Logging
 - [x] Error Handling
@@ -273,7 +275,7 @@ http://127.0.0.1:8000/redoc
 
 # 📦 Version History
 
-## v0.1.0 - Core AI Assistant
+## v0.1.0 - Core Thursday AI
 
 **Release Date:** July 2026
 
@@ -281,7 +283,7 @@ http://127.0.0.1:8000/redoc
 
 - FastAPI backend
 - Google Gemini integration
-- Custom F.R.I.D.A.Y. personality
+- Custom Thursday-AI personality
 - Short-term conversation memory
 - Professional logging
 - Error handling
@@ -335,7 +337,7 @@ This project is licensed under the MIT License.
 
 # ⭐ Future Vision
 
-The long-term goal is to transform F.R.I.D.A.Y. into a modular AI operating system capable of understanding context, remembering users, controlling local applications, interacting with the web, analyzing documents, processing voice and images, and assisting with coding, research, productivity, and everyday digital workflows while maintaining a scalable and production-ready architecture.
+The long-term goal is to transform Thursday into a modular AI operating system capable of understanding context, remembering users, controlling local applications, interacting with the web, analyzing documents, processing voice and images, and assisting with coding, research, productivity, and everyday digital workflows while maintaining a scalable and production-ready architecture.
 
 ---
 

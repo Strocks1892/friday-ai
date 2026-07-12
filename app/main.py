@@ -3,7 +3,7 @@ from app.models.chat import ChatRequest, ChatResponse
 from app.services.chat_service import ChatService
 
 app = FastAPI(
-    title="Friday AI Assistant",
+    title="Thursday AI Assistant",
     version="0.1.0",
     description="Personal AI assistant for Daily tasks and productivity"
 )
@@ -13,7 +13,7 @@ chat_service = ChatService()
 @app.get("/")
 def home():
     return{
-        "message": "Welcome to Friday AI Assistant!!",
+        "message": "Welcome to Thursday AI Assistant!!",
         "version": "0.1.0"
     }
 
