@@ -2,8 +2,15 @@ import os
 
 from dotenv import load_dotenv
 from google import genai
+from google.genai import types
 
 from app.prompts.system_prompt import SYSTEM_PROMPT
+
+from app.tools.function import (
+    calculate,
+    get_datetime,
+    open_application
+)
 
 load_dotenv()
 
@@ -26,7 +33,14 @@ class AIEngine:
 Conversation History:
 
 {history}
-"""
+""",
+            config=types.GenerateContentConfig(
+                tools=[
+                    calculate,
+                    get_datetime,
+                    open_application,
+                ]
+            )
         )
 
         return response.text
