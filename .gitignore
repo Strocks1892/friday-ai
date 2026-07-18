@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+# Thursday memory cache
+app/memory/cache/applications.json
+app/memory/cache/*
+!app/memory/cache/.gitkeep
+
 # Distribution / packaging
 .Python
 build/

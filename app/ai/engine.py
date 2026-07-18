@@ -6,6 +6,10 @@ from google.genai import types
 
 from app.prompts.system_prompt import SYSTEM_PROMPT
 
+from app.tools.weather_function import get_weather
+
+from app.tools.browser_search_function import search_web
+
 from app.tools.function import (
     calculate,
     get_datetime,
@@ -39,6 +43,8 @@ Conversation History:
                     calculate,
                     get_datetime,
                     open_application,
+                     get_weather,
+                     search_web,
                 ]
             )
         )

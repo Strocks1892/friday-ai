@@ -1,7 +1,8 @@
 from app.tools.calculator import CalculatorTool
 from app.tools.date_time_tool import DateTimeTool
 from app.tools.app_launcher import AppLauncherTool
-
+from app.tools.weather import WeatherTool
+from app.tools.browser_search import BrowserSearchTool
 
 class ToolManager:
 
@@ -12,6 +13,8 @@ class ToolManager:
         self.register(CalculatorTool())
         self.register(DateTimeTool())
         self.register(AppLauncherTool())
+        self.register(WeatherTool())
+        self.register(BrowserSearchTool())
 
     def register(self, tool):
         self.tools[tool.name] = tool
